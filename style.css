@@ -1,5 +1,5 @@
 body {
-    background: grey;
+    background: #AFAEAA;
     margin: 0;
     transform: rotate(-45deg);
     font-family: "Akzidenz-Grotesk", sans-serif, "StandGroBSKReg";
@@ -13,6 +13,14 @@ body {
     width: 800px;
     height: 110px;
     background: black;
+    animation-name: scrollblack;
+    animation-direction: normal;
+    animation-duration: 10s;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+    animation-delay: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 .redbox {
     width: 400px;
@@ -20,6 +28,12 @@ body {
     background: darkred;
     position: relative;
     left: 400px;
+    animation-name: scroll;
+    animation-direction: normal;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+    animation-timing-function: linear;
 }
 .greenbox {
     width: 400px;
@@ -27,6 +41,13 @@ body {
     background: darkgreen;
     position: relative;
     left: 200px;
+    animation-name: scrolltwo;
+    animation-direction: normal;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+    animation-delay: 3s;
+    animation-timing-function: linear;
 }
 .greenboxexception {
     width: 400px;
@@ -34,6 +55,13 @@ body {
     background: darkgreen;
     position: relative;
     left: 0px;
+    animation-name: scrolltwo;
+    animation-direction: normal;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+    animation-delay: 3s;
+    animation-timing-function: linear;
 }
 .redboxexception {
     width: 400px;
@@ -41,6 +69,12 @@ body {
     background: darkred;
     position: relative;
     left: 200px;
+    animation-name: scroll;
+    animation-direction: normal;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+    animation-timing-function: linear;
 }
 .grid {
     position: absolute;
@@ -51,10 +85,32 @@ body {
     /* transform: translate(-400px, 400px); */
     transform: rotate(45deg);
 }
+p:hover {
+    font-style: italic;
+    font-weight: bolder;
+    color: darkred;
+}
 
 @font-face {
   font-family: "Akzidenz-Grotesk";
   src: url(C:\Users\Rebeca\Desktop\Web-Design-Projects\JosefMullerBrockmannPoster\fonts\akzidenz grotesk\akzidenz grotesk/StandGroBSKReg.afm)  format('afm');
   font-weight: normal;
   font-style: normal;
+}
+
+@keyframes scroll {
+
+from {transform:translatex(1200px) ;}
+to {transform:translatex(0px) ;}
+}
+@keyframes scrolltwo {
+
+from {transform:translatex(1200px) ;}
+to {transform:translatex(0px) ;}
+}
+
+@keyframes scrollblack {
+
+from {transform:translatex(-1500px) ;}
+to {transform:translatex(1500px) ;}
 }
